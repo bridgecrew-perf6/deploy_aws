@@ -26,6 +26,6 @@
   - name: Déploiement du conteneur de l'app
     shell: "docker-compose up --build -d --scale app=3"
     args:
-      chdir: /home/admin/app/
+      chdir: /home/admin/app
     register: dockercreatedebug
   - debug: var=dockercreatedebug.stdout_lines
